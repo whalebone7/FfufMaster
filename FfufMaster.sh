@@ -1,4 +1,3 @@
-
 EBLUE='\033[1;36m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
@@ -71,18 +70,14 @@ count=0
 
 
 for file in $files; do
-  # Check if the file is a text file
   if [[ "$file" == *.txt ]]; then
-    # Check if the first character of each line is "/"
     if grep -q "^/" "$file"; then
-      # Run ffuf with the appropriate options
       if [ -n "$ffuf_option" ]; then
         ffuf -u "$url""FUZZ" -s -w "$path/wordlists/$file" $ffuf_option
       else
         ffuf -u "$url/FUZZ" -s -w "$path/wordlists/$file"
       fi
     fi
-    # Increment the file counter
     ((count++))
   fi
 done
