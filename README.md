@@ -10,3 +10,9 @@ Furthermore, `FfufMaster` is highly customizable as it allows users to add their
 
 
 # FfufMaster Installation 
+
+1. Install FFUF `go install github.com/ffuf/ffuf/v2@latest`
+2.  `git clone https://github.com/whalebone7/FfufMaster.git`
+3.  `cd FfufMaster && chmod +x FfufMaster.sh `
+4.  `./FfufMaster.sh`
+<img width="1280" alt="ffuf_master" src="https://user-images.githubusercontent.com/125891350/233148300-9d536926-97f7-43e9-b937-f4f747a1e417.png">
